@@ -19,15 +19,15 @@ def support_jsonp(f):
 
 @app.route('/')
 def hello_world():
-	return 'Hello World!'
+    return 'Hello World!'
 
 @app.route('/search', methods=['GET'])
 @support_jsonp
 def search():
-	raw = request.args.get('colors', '')
-	colors = string.split(raw, ',')
-	printable = ', '.join(colors)
-	return printable
+    raw = request.args.get('colors', '')
+    colors = string.split(raw, ',')
+    printable = ', '.join(colors)
+    return jsonify({"colors": printable})
 
 if __name__ == '__main__':
-	app.run()
+    app.run()

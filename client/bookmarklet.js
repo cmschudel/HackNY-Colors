@@ -10,7 +10,7 @@ function foo() {
   // Get colors from the page.
   function getColors() {
     // TODO
-    return 'blue,red';
+    return 'blue';
   }
 
   function sendColors() {
@@ -32,5 +32,4 @@ function foo() {
   }
 
   onJQReady(sendColors);
-
  }

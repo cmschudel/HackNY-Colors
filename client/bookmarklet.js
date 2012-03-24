@@ -14,10 +14,9 @@ function foo() {
   }
 
   function sendColors() {
-    $.get(SEARCH_URL, {
-      colors: getColors()
-    }, function() {
+    $.getJSON(SEARCH_URL + "?callback=?", { colors : getColors() }, function(data) {
       console.log('in callback');
+      console.log(data);
     });
   }
 

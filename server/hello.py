@@ -1,8 +1,7 @@
 import sys, string, json
 from flask import Flask
-from flask import request
 from functools import wraps
-from flask import redirect, current_app
+from flask import request, redirect, current_app, jsonify
 app = Flask(__name__)
 
 def support_jsonp(f):
@@ -30,4 +29,4 @@ def search():
     return jsonify({"colors": printable})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)

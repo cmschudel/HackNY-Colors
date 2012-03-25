@@ -10,7 +10,10 @@ function foo() {
   // Get colors from the page.
   function getColors() {
     // TODO
-    return 'blue';
+    return '1,2,3;'
+        + '4,5,6;'
+        + '6,8,8;'
+        + '6,9,8';
   }
 
   function sendColors() {
